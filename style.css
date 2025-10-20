@@ -1,0 +1,397 @@
+/* cabeçalho */
+
+nav {
+    color: #070707;
+    display: flex;
+    justify-content: end;
+    font-family: "Jura";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 25px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    word-spacing: 8px;
+}
+
+/* Imagem Logo */
+
+.logo {
+    width: 59;
+    height: 70;
+    top: 39px;
+    left: 60px;
+    opacity: 1;
+}
+
+/* Imagem HomePage */
+
+.hero {
+    background-image: url(Imagens/56d8144cbded6b64756f769dfd17493fdca80df2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* Texto HomePage */
+
+#living {
+    font-family: "Josefin Slab";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 85px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* Frase da Pagina de Trabalhos*/
+
+#jobspage {
+    background-color: #B49B2C40;
+    background-size: cover;
+}
+
+.greenword {
+    color: #686931;
+    font-weight: bold;
+}
+
+#frase {
+    font-family: "Jura";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 43px;
+    line-height: 118%;
+    letter-spacing: 20%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Título Pagina de Trabalhos*/
+
+.jobremote {
+    font-family: "Jura";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 50px;
+}
+
+#remoteside {
+    padding-top: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+/* Lista da Pagina de Trabalhos*/
+
+ul {
+    list-style: none;
+}
+
+#list1 {
+    font-family: "Jura";
+    text-align: left;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 118%;
+    letter-spacing: 0%;
+}
+
+#list2 {
+    font-family: "Jura";
+    text-align: left;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 118%;
+    letter-spacing: 0%;
+}
+
+/* borda dos cantos da Pagina de Trabalhos*/
+
+#lists {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.canto {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.canto1 {
+    top: 0;
+    left: 0;
+    border-top: 8px solid black;
+    border-left: 8px solid black;
+}
+
+.canto2 {
+    bottom: 0;
+    right: 0;
+    border-bottom: 8px solid black;
+    border-right: 8px solid black;
+}
+
+border-end {
+    color: black;
+}
+
+/* Espaços da Pagina de Trabalhos*/
+
+.space1 {
+    height: 100px;
+}
+
+.space2 {
+    height: 100px;
+}
+
+/* Imagem da Pagina do Ecritorio*/
+
+#van {
+    background-image: url("Imagens/70f6b786bb5d600e9c82037af1a02e4dc2f4f5c4.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 515px;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+}
+
+/* Frase da Pagina do Ecritorio*/
+
+#blackspace {
+    background-color: #000000;
+    background-size: cover;
+    font-family: "Jura";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Botão da Pagina do Ecritorio*/
+
+.botao_descobrir {
+    background-color: transparent;
+    color: white;
+    font-family: "Jura";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 25px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    border: 2px solid white;
+    padding: 15px 80px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao_descobrir:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Botão Topo */
+
+#topo {
+    font-family: "Jura";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#topo:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Imagem da Pagina Destinos*/
+
+#floresta {
+    background-image: url("Imagens/05bccec0e9dc048e1c9b13db22060ff92abe71aa.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 541px;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+}
+
+/* Frase da Pagina Destinos*/
+
+#phrasespace {
+    background-color: #B49B2C40;
+    background-size: cover;
+    font-family: "Jura";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+/* Botão da Pagina Destinos*/
+
+.botao_explorar {
+    background-color: transparent;
+    color: black;
+    font-family: "Jura";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 25px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    border: 2px solid black;
+    padding: 15px 80px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao_explorar:hover {
+    background-color: black;
+    color: #B49B2C40;
+    transform: scale(1.1);
+}
+
+/* Botão Topo */
+
+#topo2 {
+    font-family: "Jura";
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#topo2:hover {
+    background-color: black;
+    color: #B49B2C40;
+    transform: scale(1.05);
+}
+
+/* Pagina Blog*/
+
+#blog {
+    background-image: url("Imagens/ead2fcb0b8f7592bf3f5a9687bfa209fac920389.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 690px;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Botão da Pagina Blog*/
+
+.botao_blog {
+    background-color: black;
+    color: white;
+    font-family: "Jura";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 25px;
+    line-height: 118%;
+    letter-spacing: 0%;
+    border: 2px solid black;
+    padding: 15px 80px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao_blog:hover {
+    background-color: transparent;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Botão Topo */
+
+#topo3 {
+    font-family: "Jura";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#topo3:hover {
+    background-color: transparent;
+    color: black;
+    transform: scale(1.1);
+}
