@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnWheels</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay" aria-hidden="true"></div>
+    <header>
+        <div class="logo">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                style="opacity:.85">
+                <path d="M3 3L9 3" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M3 10L15 10" stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path d="M3 17L21 17" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span style="font-family:'Playfair Display',serif;">OnWheels</span>
+        </div>
+        <nav>
+            <a href="#">ACOMODAÇÃO</a>
+            <a href="#">LOCAIS</a>
+            <a href="#">BLOG</a>
+            <a href="#">CONTATOS</a>
+        </nav>
+    </header>
+
+
+    <main class="container" role="main">
+        <section class="contact-card" aria-label="Formulário de Contacto">
+            <form action="#" onsubmit="event.preventDefault();alert('Enviado (simulação)');">
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" type="text" placeholder="" />
+
+
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="" />
+
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+
+
+                <button class="btn-send" type="submit">Enviar</button>
+            </form>
+        </section>
+
+
+        <section class="quote-box">
+            <p class="quote">“Viajar é descobrir que todos estão errados sobre outros países.”</p>
+            <small>– Aldous Huxley</small>
+        </section>
+    </main>
+</body>

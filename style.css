@@ -1,30 +1,45 @@
 /* RESET GERAL */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* BODY */
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* cabeçalho */
 
-nav {
-    color: #070707;
-    display: flex;
-    justify-content: end;
+.navbar {
     font-family: "Jura";
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 25px;
-    line-height: 118%;
-    letter-spacing: 0%;
-    word-spacing: 8px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 60px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /* Imagem Logo */
@@ -324,7 +339,7 @@ border-end {
     font-family: "Jura";
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     background-color: transparent;
     color: black;
     border: 3px solid black;
@@ -338,9 +353,9 @@ border-end {
 }
 
 #topo2:hover {
-    background-color: black;
-    color: #B49B2C40;
-    transform: scale(1.05);
+    background-color: transparent;
+    color: black;
+    transform: scale(1.1);
 }
 
 /* Pagina Blog*/
@@ -408,4 +423,53 @@ border-end {
     background-color: transparent;
     color: black;
     transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+/* Container do conteúdo */
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Título */
+.footer-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Ícones sociais */
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Créditos */
+.footer-credit {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
 }
