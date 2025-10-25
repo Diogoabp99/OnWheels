@@ -1,0 +1,381 @@
+:root {
+    --bg-image: url("Imagens/ed0e1880be8377fb52e107716094cc0359fc17aa.jpg");
+    --white: #ffffff;
+    --black: #000000;
+    --card-bg: rgba(0, 0, 0, 0.92);
+    --overlay: rgba(0, 0, 0, 0.45);
+    --radius-lg: 22px;
+    --hero-min-h: 100vh;
+    --header-h: 88px;
+    --left-gutter: 120px;
+    --card-w: 500px;
+    --card-px: 38px;
+    --field-w: 360px;
+    --field-h: 54px;
+    --btn-h: 58px;
+    --quote-w: 520px;
+    --nav-gap: 56px;
+    --nav-size: 15px;
+    --nav-letter: 0.08em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-text);
+    color: var(--white);
+    background: #111;
+}
+
+/* Cabeçalho */
+
+.site-header {
+    font-family: "Josefin slab";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-h);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-mark {
+    height: 46px;
+    width: auto;
+    display: block;
+}
+
+/* Navbar */
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--nav-gap);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--nav-size);
+    letter-spacing: var(--nav-letter);
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.main-nav a:hover {
+    opacity: 1;
+}
+
+/* Imagem */
+
+.hero {
+    position: relative;
+    min-height: var(--hero-min-h);
+    display: block;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: calc(var(--hero-min-h) - var(--header-h));
+    padding-top: var(--header-h);
+}
+
+/* Formulário */
+
+.filter-card {
+    display: flex;
+    font-family: "Jura";
+    justify-content: flex-start;
+    padding-left: var(--left-gutter, 120px);
+    margin-top: 70px;
+}
+
+#filterForm {
+    height: 500px;
+    width: 400px;
+    background: #e3e3e3;
+    border-radius: 18px;
+    padding: 28px 34px 30px;
+    box-shadow: 0 24px 40px rgba(0, 0, 0, .35);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 380px;
+}
+
+.form-field.light {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-field.light label {
+    font-family: "Jura";
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin: 8px 0 10px;
+}
+
+.select-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+}
+
+.select-wrap select {
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    border: 0;
+    border-radius: 12px;
+    padding: 0 54px 0 16px;
+    font-size: 16px;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05) inset;
+}
+
+.select-wrap::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #111;
+    pointer-events: none;
+}
+
+.btn-olive {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 56px;
+    border-radius: 10px;
+    border: 0;
+    background: #7d7f3a;
+    color: #1a1a1a;
+    font-family: var(--font-ui, "Montserrat", system-ui);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: filter .15s ease, transform .05s ease;
+}
+
+.btn-olive:hover {
+    filter: brightness(1.05);
+}
+
+.btn-olive:active {
+    transform: translateY(1px);
+}
+
+/* Responsivo rápido */
+@media (max-width: 992px) {
+    .filter-card {
+        padding-left: 40px;
+    }
+
+    #filterForm {
+        width: 480px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-card {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #filterForm {
+        width: min(92vw, 520px);
+    }
+}
+
+
+/* Modal */
+
+.modal {
+    font-family: "Jura";
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Mapa*/
+
+.map-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 0;
+    margin-top: 80px;
+}
+
+.map-wrap {
+    width: 400px;
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 40px rgba(0, 0, 0, .35);
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Morada */
+
+.address-card.address-dark {
+    width: 400px;
+    padding: 18px 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.58);
+    color: #fff;
+    font-family: "Jura";
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .45);
+}
+
+
+/* Responsivo leve */
+@media (max-width: 768px) {
+    .address-card.address-dark {
+        right: 12px;
+        bottom: 12px;
+        width: 280px;
+        padding: 14px 16px 12px;
+    }
+
+    .address-card.address-dark h4 {
+        font-size: 15px;
+    }
+}
+
+
+/* Responsivo rápido */
+@media (max-width: 992px) {
+    .map-wrap {
+        width: min(680px, 92vw);
+        height: 380px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-area {
+        justify-content: center;
+        padding: 28px 0 44px;
+    }
+
+    .map-wrap {
+        margin-left: 0;
+        width: min(92vw, 760px);
+        height: 340px;
+    }
+
+    .address-card {
+        right: 12px;
+        bottom: 12px;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-wrap {
+        height: 310px;
+    }
+
+    .address-card {
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+}
+
+
+
+/* Responsividade básica  */
+
+@media (max-width: 1100px) {
+    .hero__content {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .form-card {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .quote {
+        width: min(92vw, var(--quote-w));
+        margin: 0 auto 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .quote blockquote,
+    .quote figcaption {
+        text-align: center;
+    }
+}

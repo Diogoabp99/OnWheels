@@ -1,20 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnWheels</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pag Acomodações</title>
+
+    <link rel="stylesheet" href="pag-acomodaçoes.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&family=Jura:wght@300..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
+<!-- Modal -->
+
+<div class="modal fade" id="hippieModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <div class="modal-body">
+                <figure class="modal-img">
+                    <img src="Imagens/7358459b3c49f750c1f2259a0433bb8f8e877553.jpg" alt="Hippie Ride">
+                </figure>
+                <h3 class="modal-title">Hippie Ride</h3>
+                <p>
+                    Imagine acordar com o som das ondas na praia, estacionar à beira de uma floresta serena ou partir
+                    numa viagem espontânea sem preocupações com hotéis ou horários. Alugar uma carrinha adaptada é
+                    sinónimo de liberdade, conforto e aventura – tudo em um só lugar!
+                </p>
+                <p>
+                    A nossa carrinha é a solução perfeita para viajantes que buscam autonomia e praticidade, sem abrir
+                    mão do essencial. Por apenas 50€ por dia, você tem um lar sobre rodas totalmente equipado para
+                    tornar sua viagem inesquecível:
+                </p>
+                <ul>
+                    <li>✔️ Cozinha completa – Prepare suas refeições favoritas a qualquer momento.</li>
+                    <li>✔️ Cama de casal confortável – Descanse com todo o espaço que precisa.</li>
+                    <li>✔️ WC portátil – Privacidade e conveniência onde quer que vá.</li>
+                    <li>✔️ Carregador USB – Mantenha seus dispositivos sempre prontos para uso.</li>
+                </ul>
+                <p>
+                    <strong>Por que escolher a nossa carrinha?</strong><br>
+                    • Economia: Mais barato que hotéis e com total flexibilidade.<br>
+                    • Conforto: Tudo o que você precisa em um espaço compacto e bem organizado.<br>
+                    • Aventura personalizada: Viaje no seu ritmo, pare onde quiser e crie memórias únicas.
+                </p>
+                <p>
+                    Seja para um fim de semana romântico, uma escapada em família ou uma viagem cheia de descobertas, a
+                    nossa carrinha está pronta para ser a sua companheira de estrada. Reserve já e transforme qualquer
+                    destino em casa!
+                </p>
+
+                <button class="btn-alugar" data-bs-dismiss="modal">Alugar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <body>
-    <h1>PAG_ACOMODACAO</h1>
+
+    <!-- Cabeçalho -->
+
+    <nav class="navbar navbar-expand-lg site-nav position-absolute" aria-label="Cabeçalho">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Imagens/logo.png" class="logo" alt="logo">
+            </a>
+
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end text-bg-white" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto gap-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="#catalog">Acomodação</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pag_locais.html">Locais</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pag_locais.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pag_contactos.html" id="contactos">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Linha Preta -->
+
+    <section class="hero-van">
+        <div class="hero-van__bg"></div>
+        <div class="hero-van__band">
+            <h1>O SEU NOVO OFFICE</h1>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+
+    <section class="catalog" id="catalog">
+        <div class="cards">
+            <article class="card">
+                <figure class="card__media">
+                    <img src="Imagens/7358459b3c49f750c1f2259a0433bb8f8e877553.jpg" alt="Hippie Ride">
+                </figure>
+                <div class="card__body">
+                    <h3>Hippie Ride</h3>
+                    <p class="price">A partir de 50€/dia</p>
+                    <p class="lead">Equipada com :</p>
+                    <ul class="bullet">
+                        <li>Cozinha equipada;</li>
+                        <li>Cama de casal;</li>
+                        <li>WC portátil;</li>
+                        <li>Carregador USB;</li>
+                    </ul>
+                    <a class="card__more" href="#" data-bs-toggle="modal" data-bs-target="#hippieModal">+ info</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <figure class="card__media">
+                    <img src="Imagens/b2de76a237da7e3056d77486a2618cf29bbb6d13.jpg" alt="Harvest Ride">
+                </figure>
+                <div class="card__body">
+                    <h3>Harvest Ride</h3>
+                    <p class="price">A partir de 80€/dia</p>
+                    <p class="lead">Equipada com :</p>
+                    <ul class="bullet">
+                        <li>Cozinha equipada;</li>
+                        <li>Cama de casal;</li>
+                        <li>WC portátil;</li>
+                        <li>Carregador USB;</li>
+                    </ul>
+                    <a class="card__more" href="#">+ info</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <figure class="card__media">
+                    <img src="Imagens/8b06a6b8db87de46eda1d8637697334bd36c9eb6.jpg" alt="Nomade Ride">
+                </figure>
+                <div class="card__body">
+                    <h3>Nomade Ride</h3>
+                    <p class="price">A partir de 100€/dia</p>
+                    <p class="lead">Equipada com :</p>
+                    <ul class="bullet">
+                        <li>Cozinha equipada;</li>
+                        <li>Cama de casal;</li>
+                        <li>WC incorporado;</li>
+                        <li>Carregador USB;</li>
+                    </ul>
+                    <a class="card__more" href="#">+ info</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <figure class="card__media">
+                    <img src="Imagens/e1e541054a226d35a5d8aae4bfec95ff4f669eaf.jpg" alt="Family Ride">
+                </figure>
+                <div class="card__body">
+                    <h3>Family Ride</h3>
+                    <p class="price">A partir de 50€/dia</p>
+                    <p class="lead">Equipada com :</p>
+                    <ul class="bullet">
+                        <li>Cozinha equipada;</li>
+                        <li>Cama de casal;</li>
+                        <li>WC incorporado;</li>
+                        <li>Carregador USB;</li>
+                    </ul>
+                    <a class="card__more" href="#">+ info</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <figure class="card__media">
+                    <img src="Imagens/7cc52352e08bc4f71687c2edd6079ba41975fe91.jpg" alt="Surf Ride">
+                </figure>
+                <div class="card__body">
+                    <h3>Surf Ride</h3>
+                    <p class="price">A partir de 60€/dia</p>
+                    <p class="lead">Equipada com :</p>
+                    <ul class="bullet">
+                        <li>Cozinha equipada;</li>
+                        <li>Cama de casal;</li>
+                        <li>WC portátil;</li>
+                        <li>Carregador USB;</li>
+                    </ul>
+                    <a class="card__more" href="#">+ info</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <figure class="card__media">
+                    <img src="Imagens/98eca54acfc153f770f4d229ea602227987a7e39.jpg" alt="Cave Rive">
+                </figure>
+                <div class="card__body">
+                    <h3>Cave Rive</h3>
+                    <p class="price">A partir de 30€/dia</p>
+                    <p class="lead">Equipada com :</p>
+                    <ul class="bullet">
+                        <li>Cozinha equipada;</li>
+                        <li>Cama de casal;</li>
+                        <li>WC portátil;</li>
+                        <li>Carregador USB;</li>
+                    </ul>
+                    <a class="card__more" href="#">+ info</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+
+    <footer>
+        <div class="footer-container">
+            <h2 class="footer-title">LIVING AROUND</h2>
+            <div class="social-icons">
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="icon">
+                        <img src="imagens/face.png" alt="Facebook">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="icon">
+                        <img src="imagens/insta.png" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="icon">
+                        <img src="imagens/x.png" alt="X">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-credit">Power by Cesae Digital</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+</html>

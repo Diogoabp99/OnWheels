@@ -1,0 +1,322 @@
+:root {
+    --nav-h: 88px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Jura", sans-serif;
+}
+
+/* Cabeçalho */
+
+.site-nav {
+    font-family: "Josefin Slab", serif;
+    padding: 20px 60px;
+    background: transparent !important;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+}
+
+.site-nav .nav-link {
+    font-family: "Josefin Slab";
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.navbar ul li {
+    margin-left: 50px;
+}
+
+.logo {
+    color: #000000;
+}
+
+.site-nav .nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Linha Preta */
+
+.hero-van {
+    position: relative;
+    height: 500px;
+    isolation: isolate;
+}
+
+.hero-van__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("Imagens/df91b617ee90d6e829d46a02b68192a91cea73a0 (1).jpg");
+    background-size: cover;
+    background-position: center 40%;
+}
+
+
+.hero-van__band {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 110px;
+    background: rgba(0, 0, 0, 0.65);
+    display: grid;
+    place-items: center;
+    padding: 0 24px;
+}
+
+.hero-van__band h1 {
+    margin: 0;
+    color: #fff;
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: .02em;
+    text-align: center;
+}
+
+/* Catálogo */
+
+.catalog {
+    background: #cfc9a8;
+    padding: 48px 0 64px;
+}
+
+.cards {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+}
+
+.card {
+    background: #e5e5e5;
+    border-radius: 22px;
+    box-shadow: 6px 10px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .080);
+}
+
+.card__media {
+    margin: 0;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__body {
+    padding: 16px 18px 18px;
+    color: #222;
+}
+
+.card__body h3 {
+    text-align: center;
+    margin: 6px 0 12px;
+    font-weight: 700;
+}
+
+.price,
+.lead {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.lead {
+    margin-bottom: 6px;
+}
+
+.bullet {
+    margin: 0 0 10px 16px;
+    list-style: disc;
+    font-size: 14px;
+}
+
+.bullet li {
+    margin: 0 0 4px;
+}
+
+.card__more {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Modal */
+
+.custom-modal {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f5f5f5;
+    font-family: "Jura", sans-serif;
+}
+
+.modal-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    margin-bottom: 16px;
+}
+
+.custom-modal .modal-title {
+    text-align: center;
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.custom-modal .modal-body {
+    padding: 20px 28px 28px;
+}
+
+.custom-modal p,
+.custom-modal li {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.custom-modal ul {
+    margin: 0 0 16px 0;
+    padding-left: 20px;
+}
+
+.btn-alugar {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    background: #7d7f3a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-alugar:hover {
+    filter: brightness(1.1);
+}
+
+
+/* Rodapé */
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.footer-credit {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* Responsivo */
+
+@media (max-width: 992px) {
+    :root {
+        --nav-h: 76px;
+    }
+
+    .hero-van__band h1 {
+        font-size: 52px;
+    }
+
+    .site-nav .nav-link {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --nav-h: 68px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hero-van {
+        height: 300px;
+    }
+
+    .hero-van__band {
+        height: 96px;
+    }
+
+    .hero-van__band h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --nav-h: 62px;
+    }
+
+    .hero-van {
+        height: 260px;
+    }
+
+    .hero-van__band {
+        height: 84px;
+    }
+
+    .hero-van__band h1 {
+        font-size: 32px;
+    }
+}

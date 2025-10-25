@@ -38,8 +38,9 @@ body {
 .navbar ul li a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 500;
+    font-style: Bold;
 }
 
 /* Imagem Logo */
@@ -472,4 +473,115 @@ footer {
     font-size: 14px;
     color: #aaa;
     margin-top: 10px;
+}
+
+/* --- Responsividade --- */
+.logo { width: 59px; height: 70px; }
+
+@media (max-width: 1200px) {
+  .navbar { padding: 18px 40px; }
+  .navbar ul li { margin-left: 24px; }
+  .navbar ul li a { font-size: 22px; }
+
+  #living { font-size: 72px; }
+
+  #frase { font-size: 38px; padding-top: 80px; padding-bottom: 80px; }
+  .jobremote { font-size: 28px; }
+
+  #van, #floresta { height: 460px; }
+  #blog { height: 620px; }
+
+  .botao_descobrir,
+  .botao_explorar,
+  .botao_blog { font-size: 22px; padding: 14px 64px; }
+}
+
+@media (max-width: 992px) {
+  .navbar { padding: 16px 28px; }
+  .navbar ul li { margin-left: 18px; }
+  .navbar ul li a { font-size: 19px; }
+
+  .navbar { justify-content: center; }
+  
+  .hero { height: 85vh; padding: 0 24px; }
+  #living { font-size: 58px; }
+
+  #frase { font-size: 32px; padding-top: 64px; padding-bottom: 64px; }
+  .jobremote { font-size: 26px; }
+
+  #remoteside { padding-left: 40px; padding-right: 40px; }
+
+  #van, #floresta { height: 420px; }
+  #blog { height: 560px; }
+
+  #list1, #list2 { font-size: 18px; }
+
+  .botao_descobrir,
+  .botao_explorar,
+  .botao_blog { font-size: 20px; padding: 12px 56px; }
+
+  .social-icons a img { width: 36px; height: 36px; }
+  .footer-title { font-size: 18px; }
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 14px 20px; }
+  .navbar ul { gap: 10px; }
+  .navbar ul li { margin-left: 12px; }
+  .navbar ul li a { font-size: 17px; }
+
+  #living { font-size: 44px; }
+
+  #frase { font-size: 26px; padding-top: 48px; padding-bottom: 48px; }
+  .jobremote { font-size: 24px; }
+
+  #remoteside { padding-left: 24px; padding-right: 24px; }
+
+  .hero { height: 70vh; padding: 0 16px; }
+  #van, #floresta { height: 360px; }
+  #blog { height: 500px; }
+
+  .canto { width: 36px; height: 36px; }
+  .canto1 { border-top-width: 6px; border-left-width: 6px; }
+  .canto2 { border-bottom-width: 6px; border-right-width: 6px; }
+
+  .botao_descobrir,
+  .botao_explorar,
+  .botao_blog { font-size: 18px; padding: 10px 44px; }
+
+  #topo, #topo2, #topo3 {
+    width: 44px; height: 44px; font-size: 26px; border-width: 2px;
+    bottom: 16px; right: 16px;
+  }
+
+  .footer-container { padding: 0 16px; }
+  .footer-credit { font-size: 13px; }
+}
+
+
+@media (max-width: 576px) {
+
+  .navbar { padding: 12px 14px; }
+  .navbar ul li { margin-left: 10px; }
+  .navbar ul li a { font-size: 15px; }
+  .brand, .logo { transform: scale(0.92); transform-origin: left center; }
+
+  #living { font-size: 34px; }
+  #frase { font-size: 22px; padding-top: 36px; padding-bottom: 36px; }
+  .jobremote { font-size: 22px; }
+  #list1, #list2 { font-size: 16px; }
+
+  .hero { height: 62vh; }
+  #van, #floresta { height: 300px; }
+  #blog { height: 460px; }
+
+  .botao_descobrir,
+  .botao_explorar,
+  .botao_blog { font-size: 16px; padding: 10px 34px; border-width: 2px; }
+
+  .social-icons { gap: 14px; }
+  .social-icons a img { width: 30px; height: 30px; }
+
+  .footer-title { font-size: 16px; }
+  .footer-credit { font-size: 12px; }
 }

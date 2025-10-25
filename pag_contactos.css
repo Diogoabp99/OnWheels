@@ -1,100 +1,298 @@
-:root{
---white: #ffffff;
---black: #000000;
---overlay: rgba(0,0,0,0.6);
---card-radius: 22px;
---accent: #ffffff;
+:root {
+    --bg-image: url("Imagens/f31e045134c4b208818e74d27e9aa473c0846690.jpg");
+    --white: #ffffff;
+    --black: #000000;
+    --card-bg: rgba(0, 0, 0, 0.92);
+    --overlay: rgba(0, 0, 0, 0.45);
+    --radius-lg: 22px;
+    --hero-min-h: 100vh;
+    --header-h: 88px;
+    --left-gutter: 120px;
+    --card-w: 500px;
+    --card-px: 38px;
+    --field-w: 360px;
+    --field-h: 54px;
+    --btn-h: 58px;
+    --quote-w: 520px;
+    --nav-gap: 56px;
+    --nav-size: 15px;
+    --nav-letter: 0.08em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-text);
+    color: var(--white);
+    background: #111;
+}
+
+/* Cabeçalho */
+
+.site-header {
+    font-family: "Josefin slab";
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-h);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-mark {
+    height: 46px;
+    width: auto;
+    display: block;
+}
+
+/* Navbar */
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--nav-gap);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: var(--nav-size);
+    letter-spacing: var(--nav-letter);
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.main-nav a:hover {
+    opacity: 1;
+}
+
+/* Imagem */
+
+.hero {
+    position: relative;
+    min-height: var(--hero-min-h);
+    display: block;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: calc(var(--hero-min-h) - var(--header-h));
+    padding-top: var(--header-h);
+}
+
+/* Formulário */
+
+.form-card {
+    font-family: "Jura";
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: var(--left-gutter);
+    width: 467px;
+}
+
+.contact-form {
+    width: var(--card-w);
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 32px var(--card-px) 34px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    color: var(--white);
+    margin: 4px 0 8px;
+}
+
+input,
+textarea {
+    width: var(--field-w);
+    background: #fff;
+    color: #111;
+    border: 0;
+    border-radius: 14px;
+    height: var(--field-h);
+    padding: 14px 16px;
+    font-size: 15px;
+    outline: none;
+}
+
+textarea {
+    height: auto;
+    min-height: 138px;
+    resize: vertical;
+}
+
+.btn-outline {
+    width: calc(var(--field-w) + 0px);
+    height: var(--btn-h);
+    border-radius: 999px;
+    border: 2px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-ui);
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    margin: 16px 0 4px;
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Citação */
+
+.quote {
+    font-family: "Jura";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: var(--quote-w);
+    margin-right: 80px;
+    margin-top: -350px;
+    text-align: center;
+    color: var(--white);
+}
+
+.quote blockquote {
+    margin: 0 0 14px 0;
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.quote figcaption {
+    font-size: 14px;
+    opacity: 0.9;
+    color: var(--white);
+}
+
+/* Modal */
+
+.modal {
+    font-family: "Jura";
+  display: none; /* escondido por padrão */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55); /* fundo escuro */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  color: #111;
+  padding: 30px 40px;
+  border-radius: 22px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+  font-family: var(--font-ui);
+  font-size: 16px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background: #3aa8ff;
+  border: none;
+  color: #fff;
+  padding: 12px 36px;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.modal-content button:hover {
+  background: #2598f5;
 }
 
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:'Montserrat',system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+/* Responsividade básica  */
 
+@media (max-width: 1100px) {
+    .hero__content {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
 
-body{
-background-image: url(Imagens/f31e045134c4b208818e74d27e9aa473c0846690.jpg); /* substitui pelo caminho correto */
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-color:var(--white);
-position:relative;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-}
+    .form-card {
+        justify-content: center;
+        padding-left: 0;
+    }
 
+    .quote {
+        width: min(92vw, var(--quote-w));
+        margin: 0 auto 40px;
+        text-align: center;
+        align-items: center;
+    }
 
-.overlay{
-position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,8,15,0.55) 0%, rgba(2,8,15,0.6) 100%);
-pointer-events:none;
-}
-
-
-header{
-position:absolute;top:28px;left:32px;right:32px;display:flex;align-items:center;justify-content:space-between;z-index:5;
-}
-
-
-.logo{
-display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.85);font-weight:700;font-size:26px;letter-spacing:2px;
-}
-
-
-nav{
-display:flex;gap:36px;align-items:center;font-family:'Playfair Display',serif;
-color:var(--white);z-index:10
-}
-nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:500;letter-spacing:2px}
-
-
-.container{
-width:100%;max-width:1200px;display:grid;grid-template-columns:480px 1fr;gap:40px;align-items:center;padding:80px 40px;z-index:4;position:relative;
-}
-
-
-.contact-card{
-background:rgba(0,0,0,0.92);
-padding:36px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,0.6);border:3px solid rgba(255,255,255,0.03);
-}
-
-
-.contact-card label{display:block;color:#ddd;font-size:14px;margin:8px 0 6px}
-.contact-card input[type=text],
-.contact-card input[type=email],
-.contact-card textarea{
-width:100%;padding:18px;border-radius:12px;border:none;outline:none;background:#fff;color:#000;font-size:16px;resize:none;
-box-shadow:none;display:block
-}
-
-
-.contact-card textarea{min-height:140px}
-
-
-.btn-send{
-display:inline-block;margin-top:22px;padding:14px 44px;border-radius:999px;border:2px solid var(--accent);background:transparent;color:var(--accent);
-font-size:18px;letter-spacing:2px;text-align:center;cursor:pointer;width:100%;
-}
-
-
-.quote-box{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:20px 40px}
-.quote{
-font-family:'Montserrat',sans-serif;font-size:20px;line-height:1.6;max-width:520px;text-align:right;margin-left:auto;color:rgba(255,255,255,0.95);
-font-style:normal;letter-spacing:0.4px
-}
-.quote small{display:block;margin-top:18px;color:rgba(255,255,255,0.7);font-family:'Playfair Display',serif}
-
-
-@media (max-width:980px){
-.container{grid-template-columns:1fr;padding:60px 28px;gap:28px}
-.quote{max-width:100%;text-align:center}
-header{padding:0 12px}
-}
-
-
-@media (max-width:520px){
-.contact-card{padding:22px}
-.logo{font-size:20px}
-nav{gap:18px}
-.btn-send{font-size:16px;padding:12px}
+    .quote blockquote,
+    .quote figcaption {
+        text-align: center;
+    }
 }
