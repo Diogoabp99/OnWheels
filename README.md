@@ -8,7 +8,7 @@ Tem como objetivo desenvolver a capacidade de desenvolver funcionalidades com:
 - Catálogo de vans em cards com botão "+ info"  
 - Modal com descrição detalhada de cada van  
 - Design responsivo  
-'''
+
 Site
 OnWheels - [http://127.0.0.1:5500/index.html](https://diogoabp99.github.io/OnWheels/)
 
